@@ -26,6 +26,8 @@ Install the tools that are introduced in [this series of lessons on LearnHowToPr
   }
 }
 ```
+X. run `\$ dotnet add package Microsoft.EntityFrameworkCore.Design -v 6.0.0` in project file directory
+X. run `\$ dotnet ef migrations add Initial` in projet file directory
 
 5. Create the database using the migrations in the To Do List project. Open your shell (e.g., Terminal or GitBash) to the production directory "ToDoList", and run `dotnet ef database update`. 
     - To optionally create a migration, run the command `dotnet ef migrations add MigrationName` where `MigrationName` is your custom name for the migration in UpperCamelCase. To learn more about migrations, visit the LHTP lesson [Code First Development and Migrations](https://www.learnhowtoprogram.com/c-and-net-part-time/many-to-many-relationships/code-first-development-and-migrations).
