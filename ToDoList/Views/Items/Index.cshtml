@@ -15,7 +15,12 @@ else
   <ul>
     @foreach (Item item in Model)
     {
-      <li>@Html.ActionLink($"{item.Description}", "Details", new { id = item.ItemId }) | @item.Category.Name</li>
+      string completedStatus = "";
+      @if (item.CompletedStatus == true)
+      {
+        completedStatus = "| Completed";
+      }
+      <li>@Html.ActionLink($"{item.Description}", "Details", new { id = item.ItemId }) | @item.DueDate | @item.Category.Name @completedStatus</li>
     }
   </ul>
 }

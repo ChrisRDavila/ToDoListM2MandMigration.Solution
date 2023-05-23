@@ -3,6 +3,7 @@
 }
 
 @model ToDoList.Models.Item
+@using System
 
 <h4>Add a new item</h4>
 
@@ -13,6 +14,8 @@
 {
   @Html.LabelFor(model => model.Description)
   @Html.TextBoxFor(model => model.Description)
+  @Html.LabelFor(model => model.DueDate)
+  @Html.EditorFor(model => model.DueDate)
 
   @Html.LabelFor(model => model.Category)
   @Html.DropDownList("CategoryId")

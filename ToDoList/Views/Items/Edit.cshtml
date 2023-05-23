@@ -14,10 +14,16 @@
 
   @Html.LabelFor(model => model.Description)
   @Html.EditorFor(model => model.Description)
-
+  <br>
+  @Html.LabelFor(model => model.CompletedStatus)
+  @Html.EditorFor(model => model.CompletedStatus)
+  <br>
+  @Html.LabelFor(model => model.DueDate)
+  @Html.EditorFor(model => model.DueDate)
+  <br>
   @Html.LabelFor(model => model.Category)
   @Html.DropDownList("CategoryId")
-
+  <br>
   <input type="submit" value="Save" />
 }
 

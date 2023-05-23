@@ -1,0 +1,19 @@
+@{
+  Layout = "_Layout";
+}
+
+@model ToDoList.Models.Item
+
+<h2>Mark Item as Completed?</h2>
+
+@Html.DisplayNameFor(model => model.Description): @Html.DisplayFor(model => model.Description)
+@using (Html.BeginForm())
+{
+  @Html.HiddenFor(model => model.ItemId)
+  @Html.HiddenFor(model => model.CategoryId)
+  @Html.HiddenFor(model => model.Description)
+  @Html.HiddenFor(model => model.DueDate)
+  @Html.EditorFor(model => model.CompletedStatus)
+  <input type="submit" value="Confirm" />
+}
+@Html.ActionLink("Back to List", "Index")
