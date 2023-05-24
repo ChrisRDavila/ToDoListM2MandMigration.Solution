@@ -26,3 +26,14 @@ namespace ToDoList.Controllers
     }
   }
 }
+
+// using list and viewbag to pass categories and items into view
+// [HttpGet("/")]
+//       public ActionResult Index()
+//       {
+//         List<Category> cats = _db.Categories.ToList();
+//         List<Item> items = _db.Items.ToList();
+//         ViewBag.categories = cats;
+//         ViewBag.items = items;
+//         return View();
+//       }
